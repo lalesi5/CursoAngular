@@ -1,3 +1,7 @@
 <h1 class="subheader">Pagina</h1>
 
-<button (click)="redireccion()" >Llevame al formualario</button>
+<div *ngIf="nombre">
+  <h2>El nombre es {{nombre}}</h2>
+</div>
+
+<button (click)="redireccion()" >Ponme nombre</button>
