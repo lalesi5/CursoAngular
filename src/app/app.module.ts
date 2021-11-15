@@ -15,6 +15,7 @@ import { BlogComponent } from './components/blog/blog.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { PaginaComponent } from './components/pagina/pagina.component';
 import { ErrorComponent } from './components/error/error.component';
+import {CommonModule} from "@angular/common";
 
 
 @NgModule({
@@ -33,10 +34,11 @@ import { ErrorComponent } from './components/error/error.component';
     PaginaComponent,
     ErrorComponent
   ],
-  imports: [
-    BrowserModule,
-    routing
-  ],
+    imports: [
+        BrowserModule,
+        routing,
+        CommonModule
+    ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })

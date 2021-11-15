@@ -8,17 +8,17 @@ import { Router, ActivatedRoute,Params } from '@angular/router'
 })
 export class PaginaComponent implements OnInit {
 
-  public nombre: string;
+  public nombre: string ='';
 
   constructor(
     private _route: ActivatedRoute,
     private _router: Router
     ) {}
-   
+
 
   ngOnInit(): void {
-    this._route.params.subscribe((params: Params) => {
-      this.nombre = params.nombre;
+    this._route.params.subscribe((params) => {
+      this.nombre = params['nombre'];
     });
   }
 
