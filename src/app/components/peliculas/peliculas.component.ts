@@ -9,13 +9,20 @@ import { Component, OnInit ,DoCheck, OnDestroy} from '@angular/core';
 export class PeliculasComponent implements OnInit, DoCheck, OnDestroy{
 
   public titulo: string;
+  public peliculas: Array<any>;
 
   constructor() {
     this.titulo = "Componente Peliculas"
+    this.peliculas =[
+      {year: 2020, title: "Spiderman 4", image: './assets/images/Spider-Man.jpg'},
+      {year: 2019, title: "Los vengadores", image: './assets/images/los vengadores.jpg'},
+      {year: 2020, title: "Batman vs Superman", image: './assets/images/Batman-vs-Superman.jpg'},
+    ];
     console.log("CONSTRUCTOR LANZADO");
    }
 
   ngOnInit(): void {
+    console.log(this.peliculas);
     console.log("Componente iniciado");
   }
 
