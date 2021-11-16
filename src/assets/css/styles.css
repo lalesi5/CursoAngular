@@ -48,7 +48,7 @@ body{
 @keyframes latir {
     0% {
         transform: scale(1,1);
-    }  
+    }
 
     50%{
         transform: scale(1.02,1.02);
@@ -60,7 +60,7 @@ body{
 
     100% {
        transform: scale(1,1);
-    }  
+    }
 }
 
 #brand {
@@ -85,7 +85,7 @@ body{
 
 #menu ul li {
     display: inline-block;
-    list-style: none;   
+    list-style: none;
     height: 46px;
     margin-left: 15px;
     margin-right: 15px;
@@ -97,9 +97,27 @@ body{
     transition: 300ms all;
 }
 
-#menu a:hover, 
+#menu a:hover,
 .active{
     color: #e52d27 !important;
+}
+
+.year-green{
+  display: block;
+  background: green;
+  color: white;
+  padding: 5px;
+  width: 121px;
+  text-align: center;
+}
+
+.year-red{
+  display: block;
+  background: red;
+  color: white;
+  padding: 5px;
+  width: 121px;
+  text-align: center;
 }
 
 
@@ -109,14 +127,14 @@ body{
     /*line-height: 320px;*/
     color: white;
     text-shadow: 0px 0px 5px #444;
-    
+
     /*degradado color*/
-    
+
     background: #e52d27;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #b31217, #e52d27);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #b31217, #e52d27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-    
+
+
 }
 
 #slider h1 {
@@ -263,7 +281,7 @@ textarea{
     width: 100%;
     height: 70px;
     line-height: 70px;
-    color: #444; 
+    color: #444;
 }
 
 #footer p {
@@ -332,7 +350,7 @@ textarea{
 .article-item-detail .image-wrap{
     float: none;
     width: 100%;
-    height: auto;    
+    height: auto;
 }
 
 .article-item-detail .image-wrap img{
@@ -389,7 +407,7 @@ textarea{
         float: none;
         margin: 0px auto;
     }
-    
+
 }
 
 /*Desde la anchura 0px hasta la anchura 1488px de pantalla*/
@@ -420,7 +438,7 @@ textarea{
     #slider.slider-small{
         height: 100px;
     }
-    
+
     #slider.slider-small h1{
         padding-top: 35px;
     }

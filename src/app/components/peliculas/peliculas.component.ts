@@ -14,9 +14,9 @@ export class PeliculasComponent implements OnInit, DoCheck, OnDestroy{
   constructor() {
     this.titulo = "Componente Peliculas"
     this.peliculas =[
-      {title: "Spiderman 4", image: './assets/images/Spider-Man.jpg'},
-      {title: "Los vengadores", image: './assets/images/los vengadores.jpg'},
-      {title: "Batman vs Superman", image: './assets/images/Batman-vs-Superman.jpg'},
+      {year: 2020, title: "Spiderman 4", image: './assets/images/Spider-Man.jpg'},
+      {year: 2019, title: "Los vengadores", image: './assets/images/los vengadores.jpg'},
+      {year: 2020, title: "Batman vs Superman", image: './assets/images/Batman-vs-Superman.jpg'},
     ];
     console.log("CONSTRUCTOR LANZADO");
    }
