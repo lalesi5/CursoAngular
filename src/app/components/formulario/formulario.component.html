@@ -40,6 +40,16 @@
 
       <input type="submit" value="Enviar" class="btn btn-succes" [disabled]="userForm.invalid"/>
     </form>
+
+    <h2 class="subheader" >
+      Eventos
+    </h2>
+    <button (click)="hasDadoClick()">
+      Dale click!!
+    </button>
+    <input type="text" [(ngModel)]="campo" (blur)="hasSalido()" />
+    {{campo}}
   </section>
+
   <app-sidebar></app-sidebar>
 </div>
