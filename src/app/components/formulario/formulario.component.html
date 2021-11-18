@@ -1,1 +1,55 @@
-<h1 class="subheader">Formulario</h1>
+<app-slider
+  [nombre]=" 'FORMULARIO' "
+  [size]="'small'"
+></app-slider>
+
+<div class="center">
+  <section id="content">
+    <h1 class="subheader">Formulario</h1>
+    <form class="mid-form" #userForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="user.nombre" required />
+        <small *ngIf="!nombre.valid && nombre.touched">
+          El nombre no es valido
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos"  #apellidos="ngModel" [(ngModel)]="user.apellidos" required />
+        <small *ngIf="!apellidos.valid && apellidos.touched">
+          Los apellidos no son validos
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label for="bio">Biografia</label>
+        <textarea name="bio"  #bio="ngModel" [(ngModel)]="user.bio"></textarea>
+        <small *ngIf="!bio.valid && bio.touched">
+          La biogradia no es valida
+        </small>
+      </div>
+
+      <div class="form-group radio-button">
+        <input type="radio" name="gener" value="hombre"  #genero="ngModel" [(ngModel)]="user.genero" required /> Hombre
+        <input type="radio" name="gener" value="mujer" #genero="ngModel" [(ngModel)]="user.genero"/> Mujer
+        <input type="radio" name="gener" value="otro" #genero="ngModel" [(ngModel)]="user.genero"/> Otro
+      </div>
+      <div class="clearfix"></div>
+
+      <input type="submit" value="Enviar" class="btn btn-succes" [disabled]="userForm.invalid"/>
+    </form>
+
+    <h2 class="subheader" >
+      Eventos
+    </h2>
+    <button (click)="hasDadoClick()">
+      Dale click!!
+    </button>
+    <input type="text" [(ngModel)]="campo" (blur)="hasSalido()" />
+    {{campo}}
+  </section>
+
+  <app-sidebar></app-sidebar>
+</div>

@@ -1,5 +1,5 @@
 import { Component, OnInit ,DoCheck, OnDestroy} from '@angular/core';
-
+import {Pelicula} from "../../models/pelicula";
 
 @Component({
   selector: 'app-peliculas',
@@ -9,15 +9,19 @@ import { Component, OnInit ,DoCheck, OnDestroy} from '@angular/core';
 export class PeliculasComponent implements OnInit, DoCheck, OnDestroy{
 
   public titulo: string;
-  public peliculas: Array<any>;
+  public peliculas: Array<Pelicula>;
+  // @ts-ignore
+  public favorita: Pelicula;
+  public fecha: any;
 
   constructor() {
     this.titulo = "Componente Peliculas"
     this.peliculas =[
-      {year: 2020, title: "Spiderman 4", image: './assets/images/Spider-Man.jpg'},
-      {year: 2019, title: "Los vengadores", image: './assets/images/los vengadores.jpg'},
-      {year: 2020, title: "Batman vs Superman", image: './assets/images/Batman-vs-Superman.jpg'},
+      new Pelicula("Spiderman 4",2020,'./assets/images/Spider-Man.jpg'),
+      new Pelicula("Los vengadores",2019,'./assets/images/los vengadores.jpg'),
+      new Pelicula("Batman vs Superman",2020,'./assets/images/Batman-vs-Superman.jpg'),
     ];
+    this.fecha = new Date(2020, 8,12);
     console.log("CONSTRUCTOR LANZADO");
    }
 
@@ -36,6 +40,10 @@ export class PeliculasComponent implements OnInit, DoCheck, OnDestroy{
 
   ngOnDestroy(){
     console.log("El componente se va a eliminar");
+  }
+
+  mostrarFavorita(event){
+    this.favorita = event.pelicula;
   }
 
 }

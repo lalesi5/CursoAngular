@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { routing, appRoutingProviders } from './app.routing';
+import {FormsModule} from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { MiComponente } from './components/mi-componente/mi-componente.component';
@@ -16,6 +17,8 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 import { PaginaComponent } from './components/pagina/pagina.component';
 import { ErrorComponent } from './components/error/error.component';
 import {CommonModule} from "@angular/common";
+import { PeliculaComponent } from './components/pelicula/pelicula.component';
+import {EsparPipe} from "./pipes/espar.pipe";
 
 
 @NgModule({
@@ -32,13 +35,15 @@ import {CommonModule} from "@angular/common";
     BlogComponent,
     FormularioComponent,
     PaginaComponent,
-    ErrorComponent
+    ErrorComponent,
+    PeliculaComponent,
+    EsparPipe
   ],
-    imports: [
-        BrowserModule,
-        routing,
-        CommonModule
-    ],
+  imports: [
+    BrowserModule,
+    routing,
+    FormsModule
+  ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
