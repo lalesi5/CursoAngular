@@ -36,11 +36,12 @@ import { PeliculaComponent } from './components/pelicula/pelicula.component';
     ErrorComponent,
     PeliculaComponent
   ],
-    imports: [
-        BrowserModule,
-        routing,
-        CommonModule
-    ],
+  imports: [
+    BrowserModule,
+    routing,
+    CommonModule,
+    CommonModule
+  ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })

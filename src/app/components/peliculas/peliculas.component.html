@@ -11,11 +11,14 @@
         Pelicula Favorita
       </h2>
       <h4>
-        {{favorita.title}}
+        {{favorita.title | uppercase }}
       </h4>
       <h4>
         {{favorita.year}}
       </h4>
+      <h5>
+        {{this.fecha | date: 'short'}}
+      </h5>
     </div>
 
     <h1 class="subheader">PELICULAS</h1>

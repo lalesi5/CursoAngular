@@ -12,6 +12,7 @@ export class PeliculasComponent implements OnInit, DoCheck, OnDestroy{
   public peliculas: Array<Pelicula>;
   // @ts-ignore
   public favorita: Pelicula;
+  public fecha: any;
 
   constructor() {
     this.titulo = "Componente Peliculas"
@@ -20,6 +21,7 @@ export class PeliculasComponent implements OnInit, DoCheck, OnDestroy{
       new Pelicula("Los vengadores",2019,'./assets/images/los vengadores.jpg'),
       new Pelicula("Batman vs Superman",2020,'./assets/images/Batman-vs-Superman.jpg'),
     ];
+    this.fecha = new Date(2020, 8,12);
     console.log("CONSTRUCTOR LANZADO");
    }
 
