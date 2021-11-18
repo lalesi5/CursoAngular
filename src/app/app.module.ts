@@ -16,6 +16,7 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 import { PaginaComponent } from './components/pagina/pagina.component';
 import { ErrorComponent } from './components/error/error.component';
 import {CommonModule} from "@angular/common";
+import { PeliculaComponent } from './components/pelicula/pelicula.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import {CommonModule} from "@angular/common";
     BlogComponent,
     FormularioComponent,
     PaginaComponent,
-    ErrorComponent
+    ErrorComponent,
+    PeliculaComponent
   ],
     imports: [
         BrowserModule,
