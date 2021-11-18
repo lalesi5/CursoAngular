@@ -17,6 +17,7 @@ import { PaginaComponent } from './components/pagina/pagina.component';
 import { ErrorComponent } from './components/error/error.component';
 import {CommonModule} from "@angular/common";
 import { PeliculaComponent } from './components/pelicula/pelicula.component';
+import {EsparPipe} from "./pipes/espar.pipe";
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { PeliculaComponent } from './components/pelicula/pelicula.component';
     FormularioComponent,
     PaginaComponent,
     ErrorComponent,
-    PeliculaComponent
+    PeliculaComponent,
+    EsparPipe
   ],
   imports: [
     BrowserModule,
