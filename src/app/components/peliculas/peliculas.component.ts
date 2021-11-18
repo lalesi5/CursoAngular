@@ -1,6 +1,5 @@
 import { Component, OnInit ,DoCheck, OnDestroy} from '@angular/core';
 import {Pelicula} from "../../models/pelicula";
-import {inlineLocales} from "@angular-devkit/build-angular/src/utils/process-bundle";
 
 @Component({
   selector: 'app-peliculas',

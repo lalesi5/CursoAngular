@@ -6,6 +6,18 @@
 <div class="center">
   <section id="content">
 
+    <div id="favorita" *ngIf="favorita">
+      <h2 class="subheader">
+        Pelicula Favorita
+      </h2>
+      <h4>
+        {{favorita.title}}
+      </h4>
+      <h4>
+        {{favorita.year}}
+      </h4>
+    </div>
+
     <h1 class="subheader">PELICULAS</h1>
     <!--
        <h2>{{titulo}}</h2>
@@ -42,17 +54,6 @@
 
     </div>
   </section>
-  <div id="favorita" *ngIf="favorita">
-    <h2 class="subheader">
-      Pelicula Favorita
-    </h2>
-    <h4>
-      {{favorita.title}}
-    </h4>
-    <h4>
-      {{favorita.year}}
-    </h4>
-  </div>
 
   <app-sidebar></app-sidebar>
 </div>
